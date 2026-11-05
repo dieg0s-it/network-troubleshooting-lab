@@ -102,5 +102,3 @@ The system successfully reached both an external IP address and a hostname, conf
 The tracepath test identified the local router as the first hop. Later hops did not respond, but this does not necessarily indicate a network failure because intermediate routers may filter diagnostic probes.
 
 This lab demonstrates a basic troubleshooting sequence: inspect local configuration, verify routing, test the gateway, test external IP connectivity, verify DNS resolution, and inspect the network path.
-
-_To be completed during the lab._
