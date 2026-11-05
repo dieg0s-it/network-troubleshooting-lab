@@ -93,7 +93,7 @@ ping -c 4 192.168.1.1
 Observations:
 - The gateway responded to all 4 ICMP echo requests.
 - Packet loss was 0%.
-- Average round-trip time was approximately 2.24 ms.
+- Average round-trip time was approximately 3.22 ms.
 - The gateway returned a TTL value of 64.
 
 Conclusion:
@@ -111,7 +111,7 @@ ping -c 4 8.8.8.8
 Observations:
 - The external IP address `8.8.8.8` responded to all 4 ICMP echo requests.
 - Packet loss was 0%.
-- Average round-trip time was approximately 13.15 ms.
+- Average round-trip time was approximately 13.86 ms.
 - The received TTL value was 117.
 
 Conclusion:
@@ -127,10 +127,10 @@ ping -c 4 google.com
 ```
 
 Observations:
-- The hostname `google.com` resolved to `192.178.25.110`.
+- The hostname `google.com` resolved to `74.125.206.139`.
 - The destination responded to all 4 ICMP echo requests.
 - Packet loss was 0%.
-- Average round-trip time was approximately 12.88 ms.
+- Average round-trip time was approximately 76.34 ms.
 
 Conclusion:
 
@@ -160,8 +160,8 @@ The tracepath command identified the first hop on the route to the destination. 
 |---|---|---|---|
 | Local network configuration | `ip address` | Wi-Fi interface `wlp3s0` is active with IP `192.168.1.134/24` | The interface has an assigned IPv4 address |
 | Routing table | `ip route` | Default gateway is `192.168.1.1` | The system has a route to external networks |
-| Gateway connectivity | `ping -c 4 192.168.1.1` | 0% packet loss, average 2.24 ms | Local connectivity is working |
-| External IP connectivity | `ping -c 4 8.8.8.8` | 0% packet loss, average 13.15 ms | External IP connectivity is working |
+| Gateway connectivity | `ping -c 4 192.168.1.1` | 0% packet loss, average 3.22 ms | Local connectivity is working |
+| External IP connectivity | `ping -c 4 8.8.8.8` | 0% packet loss, average 13.86 ms | External IP connectivity is working |
 | DNS and connectivity | `ping -c 4 google.com` | Hostname resolved; 0% packet loss | DNS resolution and external connectivity are working |
 | Network path | `tracepath google.com` | First hop responded; later hops did not reply | Intermediate routers may filter diagnostic probes |
 
@@ -174,3 +174,28 @@ The system successfully reached both an external IP address and a hostname, conf
 The tracepath test identified the local router as the first hop. Later hops did not respond, but this does not necessarily indicate a network failure because intermediate routers may filter diagnostic probes.
 
 This lab demonstrates a basic troubleshooting sequence: inspect local configuration, verify routing, test the gateway, test external IP connectivity, verify DNS resolution, and inspect the network path.
+## Screenshots
+
+### 1. Network Interface Configuration
+
+The `ip address` command displays the active network interface, IPv4 configuration, subnet information, and IPv6 address.
+
+![Network interface configuration](screenshots/network-interface.png)
+
+### 2. Routing Table
+
+The `ip route` command identifies the default gateway and the interface used to reach external networks.
+
+![Routing table](screenshots/routing-table.png)
+
+### 3. Network Connectivity Tests
+
+The ping tests verify connectivity to the local gateway, an external IP address, and a hostname.
+
+![Network connectivity tests](screenshots/connectivity-tests.png)
+
+### 4. Network Path Investigation
+
+The `tracepath` command identifies the first network hop and shows that subsequent intermediate hops did not respond to diagnostic probes.
+
+![Tracepath results](screenshots/tracepath-google.png)
