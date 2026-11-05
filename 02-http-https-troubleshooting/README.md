@@ -54,7 +54,7 @@ Command:
 
 ```bash
 curl -4 -Iv https://example.com
-``
+```
 ## Troubleshooting notes
 
 _To be completed during the lab._
