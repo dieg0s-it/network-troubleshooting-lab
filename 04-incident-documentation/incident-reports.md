@@ -47,8 +47,6 @@ No active incident was identified. These results provide a baseline for comparis
 
 ## 6. Tools Used
 
-## 6. Tools Used
-
 - `nslookup`
 - `dig`
 - `resolvectl`
@@ -96,9 +94,9 @@ Command:
 nslookup portal.empresa.example
 ```
 
-Simulated result: The valid corporate portal domain resolved to an IP address.
+Simulated result: For this exercise, assume that `portal.empresa.example` resolves to an IP address.
 
-Interpretation: DNS resolution was successful.
+Interpretation: DNS resolution is treated as successful in this simulated scenario. No real DNS query was performed.
 
 ### Step 3: Test connectivity to the portal
 
