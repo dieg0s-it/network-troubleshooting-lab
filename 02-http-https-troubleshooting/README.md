@@ -41,6 +41,7 @@ Command:
 
 ```bash
 curl -I https://example.com
+```
 
 ## Troubleshooting notes
 
