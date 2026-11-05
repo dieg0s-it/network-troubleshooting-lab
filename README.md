@@ -46,8 +46,7 @@ I am currently developing my technical skills through Google IT Support and Cisc
 
 This repository represents my commitment to continuous learning and practical technical development.
 
-*This project is a personal learning laboratory. All exercises are conducted in a controlled environment.*
-
+*This is a personal learning project. Hands-on tests were performed from an Ubuntu workstation against public services; simulated scenarios are explicitly identified.*
 ---
 
 # Versión en español
@@ -103,4 +102,4 @@ Este repositorio refleja mi compromiso con el aprendizaje continuo y el desarrol
 
 ---
 
-*Este proyecto es un laboratorio personal de aprendizaje. Todos los ejercicios se realizan en un entorno controlado.*
+*Este es un proyecto personal de aprendizaje. Las pruebas prácticas se realizaron desde un equipo Ubuntu contra servicios públicos; los escenarios simulados están claramente identificados.*
