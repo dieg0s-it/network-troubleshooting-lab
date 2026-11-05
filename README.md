@@ -26,16 +26,16 @@ These labs complement my professional experience in technical support, customer 
 
 ## Labs
 
-### 01 — DNS Troubleshooting
+### [01 — DNS Troubleshooting](01-dns-troubleshooting/README.md)
 Investigating DNS resolution, DNS records, and common name resolution issues.
 
-### 02 — HTTP/HTTPS Troubleshooting
+### [02 — HTTP/HTTPS Troubleshooting](02-http-https-troubleshooting/README.md)
 Understanding HTTP requests, response codes, and basic HTTPS connectivity diagnostics.
 
-### 03 — Network Diagnostics
+### [03 — Network Diagnostics](03-network-diagnostics/README.md)
 Using basic network diagnostic tools to investigate connectivity and routing problems.
 
-### 04 — Incident Documentation
+### [04 — Incident Documentation](04-incident-documentation/incident-reports.md)
 Creating structured technical incident reports, including troubleshooting steps, findings, and escalation notes.
 
 ## About Me
@@ -76,19 +76,19 @@ Estos laboratorios complementan mi experiencia profesional en soporte técnico, 
 
 ## Laboratorios
 
-### 01 — Resolución de problemas DNS
+### [01 — Resolución de problemas DNS](01-dns-troubleshooting/README.md)
 
 Análisis de la resolución DNS, los registros DNS y los problemas habituales de resolución de nombres.
 
-### 02 — Resolución de problemas HTTP/HTTPS
+### [02 — Resolución de problemas HTTP/HTTPS](02-http-https-troubleshooting/README.md)
 
 Comprensión de las solicitudes HTTP, los códigos de respuesta y el diagnóstico básico de conectividad HTTPS.
 
-### 03 — Diagnóstico de redes
+### [03 — Diagnóstico de redes](03-network-diagnostics/README.md)
 
 Uso de herramientas básicas de diagnóstico de red para investigar problemas de conectividad y enrutamiento.
 
-### 04 — Documentación de incidencias
+### [04 — Documentación de incidencias](04-incident-documentation/incident-reports.md)
 
 Creación de informes técnicos estructurados que incluyen pasos de diagnóstico, resultados y notas de escalado.
 
