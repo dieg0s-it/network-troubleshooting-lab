@@ -114,3 +114,17 @@ These results establish a working baseline. The reported issue has not yet been 
 - `dig`
 - `resolvectl`
 - `ping`
+## Screenshots
+
+### Successful DNS lookup with nslookup
+
+The `nslookup` command successfully resolved `google.com` and returned IPv4 and IPv6 addresses.
+
+![Successful nslookup for google.com](screenshots/dns-nslookup-google.png)
+
+### DNS A record lookup with dig
+
+The `dig` command returned `NOERROR` and six IPv4 A records for `google.com`.
+
+![Successful dig A record lookup for google.com](screenshots/dns-dig-google.png)
+
