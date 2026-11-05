@@ -170,5 +170,24 @@ The tests confirmed TCP connectivity to port 443 but no response from port 81 wi
 ## Overall conclusion
 
 The lab demonstrated how to inspect HTTP responses, examine HTTPS and TLS negotiation, compare IPv4 and IPv6 connectivity, and test TCP port reachability. These checks help isolate whether a problem occurs at name resolution, network connectivity, TLS, or the HTTP application layer.
+## Screenshots
+
+### 1. HTTPS Response Headers
+
+The `curl -I` command returned an HTTP/2 200 response and displayed the server response headers.
+
+![HTTPS response headers](screenshots/https-curl-headers.png)
+
+### 2. HTTPS and TLS Negotiation
+
+The `curl -Iv` command showed successful TLS 1.3 negotiation, certificate validation, and an HTTP/2 response over IPv4.
+
+![HTTPS TLS verbose output](screenshots/https-tls-verbose.png)
+
+### 3. TCP Port Connectivity
+
+The `nc` command was used to test TCP connectivity to port 443 and investigate connectivity to port 81.
+
+![TCP port connectivity test](screenshots/tcp-port-connectivity.png)
 
 *All results above are from hands-on tests against the public `example.com` endpoint in the user's Ubuntu environment.*
