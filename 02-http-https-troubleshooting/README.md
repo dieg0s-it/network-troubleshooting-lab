@@ -55,6 +55,13 @@ Command:
 ```bash
 curl -4 -Iv https://example.com
 ```
+#### TCP port connectivity test
+
+Command:
+
+```bash
+nc -vz example.com 443
+``
 ## Troubleshooting notes
 
 _To be completed during the lab._
