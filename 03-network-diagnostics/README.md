@@ -8,11 +8,11 @@ Practice basic network diagnostics in Ubuntu to identify connectivity issues and
 
 - `ip`
 - `ping`
-- `traceroute`
+- `tracepath`
 
-## Lab 1 — Inspect local network configuration
+## Lab 1 — Inspect Local Network Configuration
 
-### Step 1: Display network interfaces
+### Step 1: Display Network Interfaces
 
 Run:
 
@@ -26,7 +26,7 @@ Record:
 - Its subnet information
 - Whether an IPv6 address is assigned
 
-### Step 2: Display the routing table
+### Step 2: Display the Routing Table
 
 Run:
 
@@ -39,49 +39,121 @@ Record:
 - The interface used for the default route
 
 ## Results
-### Lab 1 Results — Local network configuration
 
-#### Network interfaces
+### Lab 1 Results — Local Network Configuration
+
+#### Network Interfaces
 
 Command:
 
 ```bash
 ip address
-#### Routing table
+```
+
+Observations:
+- The active Wi-Fi interface is `wlp3s0`.
+- The interface state is `UP` and `LOWER_UP`.
+- The system has the IPv4 address `192.168.1.134/24`.
+- The subnet is `192.168.1.0/24`, equivalent to subnet mask `255.255.255.0`.
+- The broadcast address is `192.168.1.255`.
+- The interface has a link-local IPv6 address beginning with `fe80::`.
+- The loopback interface `lo` uses `127.0.0.1`.
+
+Conclusion:
+
+The Wi-Fi interface is active and has a private IPv4 address assigned. The local interface configuration appears operational.
+
+#### Routing Table
 
 Command:
 
 ```bash
 ip route
 ```
-### Lab 2 Results — Gateway connectivity
+
+Observations:
+- The default gateway is `192.168.1.1`.
+- The default route uses the Wi-Fi interface `wlp3s0`.
+- The local network is `192.168.1.0/24`.
+- The system's source IPv4 address is `192.168.1.134`.
+- Traffic to destinations outside the local subnet is sent through the default gateway.
+
+Conclusion:
+
+The routing table shows a default route through the local router. The system has a defined path for reaching destinations outside its local network.
+
+### Lab 2 Results — Gateway Connectivity
 
 Command:
 
 ```bash
 ping -c 4 192.168.1.1
-``` 
-### Lab 3 Results — External IP connectivity
+```
+
+Observations:
+- The gateway responded to all 4 ICMP echo requests.
+- Packet loss was 0%.
+- Average round-trip time was approximately 2.24 ms.
+- The gateway returned a TTL value of 64.
+
+Conclusion:
+
+The local system can successfully communicate with its default gateway. The test shows no packet loss or significant latency on the local network path.
+
+### Lab 3 Results — External IP Connectivity
 
 Command:
 
 ```bash
 ping -c 4 8.8.8.8
 ```
-### Lab 4 Results — DNS and external connectivity
+
+Observations:
+- The external IP address `8.8.8.8` responded to all 4 ICMP echo requests.
+- Packet loss was 0%.
+- Average round-trip time was approximately 13.15 ms.
+- The received TTL value was 117.
+
+Conclusion:
+
+The system can successfully reach an external IP address through the local gateway. The test confirms basic external network connectivity without relying on DNS name resolution.
+
+### Lab 4 Results — DNS and External Connectivity
 
 Command:
 
 ```bash
 ping -c 4 google.com
 ```
-### Lab 5 Results — Tracing the network path
+
+Observations:
+- The hostname `google.com` resolved to `192.178.25.110`.
+- The destination responded to all 4 ICMP echo requests.
+- Packet loss was 0%.
+- Average round-trip time was approximately 12.88 ms.
+
+Conclusion:
+
+The system successfully resolved the hostname and reached the resulting IP address. DNS resolution and external connectivity are working in this test.
+
+### Lab 5 Results — Tracing the Network Path
 
 Command:
 
 ```bash
 tracepath google.com
 ```
+
+Observations:
+- The first hop was `GN630VE.home`, with a response time of approximately 2 ms.
+- The first hop corresponds to the local router or gateway.
+- Subsequent hops did not respond to the tracepath probes.
+- Previous tests confirmed successful connectivity to external IP addresses and domain names.
+
+Conclusion:
+
+The tracepath command identified the first hop on the route to the destination. The lack of replies from later hops does not necessarily indicate a connectivity failure, because intermediate routers may filter or ignore diagnostic probes.
+
 ## Troubleshooting Summary
 
 | Test | Command | Result | Interpretation |
