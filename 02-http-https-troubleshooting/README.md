@@ -33,7 +33,14 @@ Record:
 
 ## Results
 
-_To be completed during the lab._
+### Lab 1 Results
+
+#### HTTPS request
+
+Command:
+
+```bash
+curl -I https://example.com
 
 ## Troubleshooting notes
 
