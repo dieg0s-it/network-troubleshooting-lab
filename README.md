@@ -1,3 +1,4 @@
+[English](#overview) | [Español](#versión-en-español)
 # Network Troubleshooting Lab
 
 ## Overview
@@ -49,7 +50,7 @@ This repository represents my commitment to continuous learning and practical te
 
 ---
 
-# Español
+# Versión en español
 
 ## Descripción general
 
