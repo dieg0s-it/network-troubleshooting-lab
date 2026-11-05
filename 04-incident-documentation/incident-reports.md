@@ -47,10 +47,13 @@ No active incident was identified. These results provide a baseline for comparis
 
 ## 6. Tools Used
 
+## 6. Tools Used
+
 - `nslookup`
 - `dig`
 - `resolvectl`
-- ---
+- `ping`
+- `curl`
 
 # Simulated Incident: Corporate Portal HTTPS Access
 
@@ -59,6 +62,7 @@ No active incident was identified. These results provide a baseline for comparis
 ## 1. Incident Summary
 
 A user reported that they could not access a corporate portal over HTTPS, while other websites were working.
+> The domain `portal.empresa.example` is a placeholder used exclusively for this simulated exercise.
 
 ## 2. Reported Symptoms
 
@@ -119,9 +123,9 @@ Command:
 curl -I https://portal.empresa.example
 ```
 
-Simulated result: The HTTPS request failed.
+Simulated result: SSL certificate problem: certificate has expired.
 
-Interpretation: Further investigation was required.
+Interpretation: The HTTPS request failed because certificate validation was unsuccessful. Further investigation was required to identify the exact TLS certificate issue.
 
 ### Step 5: Test TCP connectivity to port 443
 
@@ -176,5 +180,3 @@ No network configuration was changed, and certificate validation was not disable
 - `nslookup`
 - `curl`
 - `nc`
-- `ping`
-- `curl`
