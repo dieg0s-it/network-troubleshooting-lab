@@ -42,8 +42,8 @@ dig google.com A
 Result:
 
 - Status: `NOERROR`
-- One IPv4 answer was returned.
-- Query time: 7 ms.
+- Six IPv4 A records were returned.
+- Query time: 0 ms.
 
 IPv6 query:
 
