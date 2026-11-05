@@ -45,10 +45,11 @@ I am currently developing my technical skills through Google IT Support and Cisc
 
 This repository represents my commitment to continuous learning and practical technical development.
 
----
+*This project is a personal learning laboratory. All exercises are conducted in a controlled environment.*
+
 ---
 
-# Versión en español
+# Español
 
 ## Descripción general
 
@@ -102,5 +103,3 @@ Este repositorio refleja mi compromiso con el aprendizaje continuo y el desarrol
 ---
 
 *Este proyecto es un laboratorio personal de aprendizaje. Todos los ejercicios se realizan en un entorno controlado.*
-
-*This project is a personal learning laboratory. All exercises are conducted in a controlled environment.*
