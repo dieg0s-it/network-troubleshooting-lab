@@ -93,7 +93,7 @@ ping -c 4 192.168.1.1
 Observations:
 - The gateway responded to all 4 ICMP echo requests.
 - Packet loss was 0%.
-- Average round-trip time was approximately 2.24 ms.
+- Average round-trip time was approximately 3.48 ms.
 - The gateway returned a TTL value of 64.
 
 Conclusion:
@@ -111,7 +111,7 @@ ping -c 4 8.8.8.8
 Observations:
 - The external IP address `8.8.8.8` responded to all 4 ICMP echo requests.
 - Packet loss was 0%.
-- Average round-trip time was approximately 13.86 ms.
+- Average round-trip time was approximately 14.16 ms.
 - The received TTL value was 117.
 
 Conclusion:
@@ -127,10 +127,10 @@ ping -c 4 google.com
 ```
 
 Observations:
-- The hostname `google.com` resolved to `74.125.206.139`.
+- The hostname `google.com` resolved to `216.58.205.46`.
 - The destination responded to all 4 ICMP echo requests.
 - Packet loss was 0%.
-- Average round-trip time was approximately 76.34 ms.
+- Average round-trip time was approximately 13.51 ms.
 
 Conclusion:
 
@@ -160,9 +160,9 @@ The tracepath command identified the first hop on the route to the destination. 
 |---|---|---|---|
 | Local network configuration | `ip address` | Wi-Fi interface `wlp3s0` is active with IP `192.168.1.134/24` | The interface has an assigned IPv4 address |
 | Routing table | `ip route` | Default gateway is `192.168.1.1` | The system has a route to external networks |
-| Gateway connectivity | `ping -c 4 192.168.1.1` | 0% packet loss, average 2.24 ms | Local connectivity is working |
-| External IP connectivity | `ping -c 4 8.8.8.8` | 0% packet loss, average 13.86 ms | External IP connectivity is working |
-| DNS and connectivity | `ping -c 4 google.com` | Hostname resolved; 0% packet loss | DNS resolution and external connectivity are working |
+| Gateway connectivity | `ping -c 4 192.168.1.1` | 0% packet loss; average 3.48 ms | Local connectivity is working |
+| External IP connectivity | `ping -c 4 8.8.8.8` | 0% packet loss; average 14.16 ms | External IP connectivity is working |
+| DNS and connectivity | `ping -c 4 google.com` | Resolved to `216.58.205.46`; 0% packet loss; average 13.51 ms | DNS resolution and external connectivity are working |
 | Network path | `tracepath google.com` | First hop responded; later hops did not reply | Intermediate routers may filter diagnostic probes |
 
 ## Overall Conclusion
