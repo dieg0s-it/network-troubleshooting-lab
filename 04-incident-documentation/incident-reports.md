@@ -50,5 +50,131 @@ No active incident was identified. These results provide a baseline for comparis
 - `nslookup`
 - `dig`
 - `resolvectl`
+- ---
+
+# Simulated Incident: Corporate Portal HTTPS Access
+
+> **Note:** This is a simulated troubleshooting scenario for learning purposes. No real corporate incident was investigated.
+
+## 1. Incident Summary
+
+A user reported that they could not access a corporate portal over HTTPS, while other websites were working.
+
+## 2. Reported Symptoms
+
+- The user could access other websites.
+- The corporate portal did not load in the browser.
+- The issue was reported by one user.
+- The user stated that the portal domain was correct.
+
+## 3. Troubleshooting Steps
+
+### Step 1: Test basic IP connectivity
+
+Command:
+
+```bash
+ping -c 4 8.8.8.8
+```
+
+Simulated result:
+
+- 4 packets received
+- 0% packet loss
+
+Interpretation: Basic IP connectivity to the tested destination was available.
+
+### Step 2: Verify DNS resolution
+
+Command:
+
+```bash
+nslookup portal.empresa.example
+```
+
+Simulated result: The valid corporate portal domain resolved to an IP address.
+
+Interpretation: DNS resolution was successful.
+
+### Step 3: Test connectivity to the portal
+
+Command:
+
+```bash
+ping -c 4 portal.empresa.example
+```
+
+Simulated result:
+
+- The domain resolved to an IP address.
+- The destination responded to ICMP.
+
+Interpretation: The destination was reachable through ICMP during the test.
+
+### Step 4: Test HTTPS response
+
+Command:
+
+```bash
+curl -I https://portal.empresa.example
+```
+
+Simulated result: The HTTPS request failed.
+
+Interpretation: Further investigation was required.
+
+### Step 5: Test TCP connectivity to port 443
+
+Command:
+
+```bash
+nc -vz portal.empresa.example 443
+```
+
+Simulated result: The TCP connection to port 443 succeeded.
+
+Interpretation: The HTTPS port was reachable during the test.
+
+### Step 6: Inspect TLS details
+
+Command:
+
+```bash
+curl -Iv https://portal.empresa.example
+```
+
+Simulated result:
+
+```text
+SSL certificate problem: certificate has expired
+```
+
+Interpretation: The simulated error indicated an expired TLS certificate.
+
+## 4. Findings
+
+- Basic IP connectivity was available.
+- DNS resolution was successful.
+- The destination responded to ICMP.
+- TCP connectivity to port 443 was successful.
+- The HTTPS request failed during certificate validation.
+- The simulated evidence pointed to a TLS certificate issue rather than a DNS or basic connectivity problem.
+
+## 5. Resolution / Next Action
+
+The issue was documented and escalated to the team responsible for the corporate portal and its TLS certificate.
+
+No network configuration was changed, and certificate validation was not disabled.
+
+## 6. Ticket Status
+
+**Escalated — pending certificate review.**
+
+## 7. Tools Used
+
+- `ping`
+- `nslookup`
+- `curl`
+- `nc`
 - `ping`
 - `curl`
