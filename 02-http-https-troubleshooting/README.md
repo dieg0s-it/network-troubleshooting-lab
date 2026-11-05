@@ -42,7 +42,13 @@ Command:
 ```bash
 curl -I https://example.com
 ```
+#### Detailed HTTPS connection
 
+Command:
+
+```bash
+curl -Iv https://example.com
+``
 ## Troubleshooting notes
 
 _To be completed during the lab._
