@@ -48,6 +48,12 @@ Command:
 
 ```bash
 curl -Iv https://example.com
+#### IPv4-only HTTPS test
+
+Command:
+
+```bash
+curl -4 -Iv https://example.com
 ``
 ## Troubleshooting notes
 
