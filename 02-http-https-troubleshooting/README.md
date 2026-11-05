@@ -61,6 +61,12 @@ Command:
 
 ```bash
 nc -vz example.com 443
+#### TCP port comparison
+
+HTTPS port test:
+
+```bash
+nc -vz example.com 443
 ``
 ## Troubleshooting notes
 
